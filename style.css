@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b263b;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url('imagens/barbearia.jpeg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: overlay;
+    padding: 10px;
+    height: 70vh;
+    color: aliceblue;
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+header h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    background-color: #1b263b;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+#menu1 ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#menu1 a  {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#menu2 {
+    display: none;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    width: 100px;
+    transition: transform 0.4s;
+    border-radius: 12px 0px 0px 12px;
+    background-color: #f0ebd8;
+}
+
+#menu2.active {
+    display: block;
+}
+
+#menu2 span {
+    display: flex; 
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+#menu2 a {
+    text-decoration: none;
+    color: #1b263b;
+    font-weight: bolder;
+}
+
+
+ul li {
+    padding: 5px 10px 20px 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+#abrir {
+    display: none;
+    cursor: pointer;
+}
+
+#agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 15vh;
+    margin-top: 130px;
+    color: aliceblue;
+}
+
+#agendamento a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#agendamento p:hover {
+    background-color: #2b3d5e;
+    transform: translate(1px, 2px);
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+/* Informações */
+
+#info h2, #info h3 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #1b263b;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f0ebd8;
+}
+
+#barbeiros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0ebd8;
+    padding: 10px;
+    height: 20vh;
+}
+
+#servicos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0ebd8;
+    padding: 10px;
+    height: 20vh;
+}
+
+/* Rodapé */
+
+footer {
+    padding: 12px 12px 5px 12px;
+    color: aliceblue;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 530px) {
+    #abrir {
+        display: block;
+    }
+
+    #menu1 {
+        display: none;
+    }
+
+    #menu2 {
+        display: block;
+    }
+}
