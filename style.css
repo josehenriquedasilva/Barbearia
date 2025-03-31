@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* Cabeçalho */
@@ -25,6 +26,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    position: relative;
     background-image: url('imagens/barbearia.jpeg');
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.35);
@@ -48,6 +50,43 @@ header p {
     background-color: #1b263b;
     padding: 10px;
     border-radius: 12px;
+}
+
+.menuFixo {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #1b263b;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.menuFixo-ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuFixo h1 {
+    margin-bottom: 7px;
+}
+
+.menuFixo button {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+}
+
+.menuFixo button:hover {
+    background-color: white;
+    color: #1b263b;
+    transform: translate(2px, 1px);
+    transition-duration: .4s;
 }
 
 #menu {
@@ -84,7 +123,7 @@ header p {
     background-color: #f0ebd8;
 }
 
-#menu2.active {
+#menu2.ativo {
     display: block;
 }
 
@@ -138,12 +177,6 @@ nav ul {
 
 /* Informações */
 
-#info h2, #info h3 {
-    font-size: 1.5em;
-    text-align: center;
-    color: #1b263b;
-}
-
 #info {
     display: flex;
     flex-direction: column;
@@ -151,14 +184,45 @@ nav ul {
     background-color: #f0ebd8;
 }
 
+#info h2, #info h3 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #1b263b;
+    margin: 15px 0px;
+}
+
+/*Sobre*/
+
+#sobre {
+    padding: 10px;
+    text-align: justify;
+    font-weight: 550;
+}
+
+/*Barbeiros*/
+
 #barbeiros {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #f0ebd8;
     padding: 10px;
-    height: 20vh;
+    height: 30vh;
+    margin-bottom: 50px;
 }
+
+#barbeiros img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+#barbeiro1, #barbeiro2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/*Serviços*/
 
 #servicos {
     display: flex;
@@ -166,7 +230,16 @@ nav ul {
     align-items: center;
     background-color: #f0ebd8;
     padding: 10px;
-    height: 20vh;
+    height: 30vh;
+}
+
+#servico1, #servico2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#servicos img {
+    width: 70px;
 }
 
 /* Rodapé */
