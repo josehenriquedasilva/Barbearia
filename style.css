@@ -31,7 +31,6 @@ header {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.35);
     background-blend-mode: overlay;
-    padding: 10px;
     height: 70vh;
     color: aliceblue;
 }
@@ -51,6 +50,8 @@ header p {
     padding: 10px;
     border-radius: 12px;
 }
+
+/*Menu Fixo*/
 
 .menuFixo {
     text-align: center;
@@ -89,10 +90,19 @@ header p {
     transition-duration: .4s;
 }
 
+/*Menu Principal*/
+
 #menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+#logo {
+    width: 95px;
+}
+
+/*Menu Hamburguer*/
 
 #menu1 {
     display: flex;
@@ -118,7 +128,7 @@ header p {
     top: 1vh;
     right: 0;
     width: 100px;
-    transition: transform 0.4s;
+    transition: transform .3s;
     border-radius: 12px 0px 0px 12px;
     background-color: #f0ebd8;
 }
@@ -152,6 +162,8 @@ nav ul {
     display: none;
     cursor: pointer;
 }
+
+/*Botão Agendamento*/
 
 #agendamento {
     display: flex;
@@ -220,6 +232,21 @@ nav ul {
     text-align: center;
     font-weight: 600;
     margin-top: 30px;
+}
+
+#barbeiros button {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    background-color: #1b263b;
+    color: aliceblue;
+}
+
+#barbeiros button:hover {
+    color: #1b263b;
+    background-color: aliceblue;
+    transition-duration: .4s;
 }
 
 /*Serviços*/
