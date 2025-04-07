@@ -4,17 +4,11 @@ const fecharMenu = document.querySelector('#fechar');
 const menu = document.querySelector('.menuFixo');
 
 abrirMenu.addEventListener('click', () => {
-    if (menu2.classList.contains('ativo')) {
-        menu2.classList.remove('ativo');
-    } else {
-        menu2.classList.add('ativo');
-        menu2.style.transform = 'translateX(0%)';
-    }
+    menu2.classList.add('abrir');
 });
 
 fecharMenu.addEventListener('click', () => {
-    menu2.style.transform = 'translateX(100%)';
-    menu2.classList.remove('ativo');
+    menu2.classList.remove('abrir');
 });
 
 window.addEventListener('scroll', () => {
