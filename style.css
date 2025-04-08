@@ -101,6 +101,8 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 1));
+    border-radius: 0px 0px 10px 10px;
 }
 
 #logo {
@@ -118,6 +120,7 @@ header p {
 }
 
 #abrir {
+    display: none;
     cursor: pointer;
 }
 
@@ -222,6 +225,7 @@ nav ul {
 #funcionarios {
     margin: auto;
     width: 80vw;
+    max-width: 1024px;
 }
 
 /*Barbeiros*/
@@ -287,13 +291,55 @@ nav ul {
 
 footer {
     display: flex;
+    background-color: #1b263b;
+    margin-top: 20px;
+}
+
+#rodape {
+    display: flex;
     justify-content: space-between;
 
-    margin-top: 20px;
-    padding: 12px 12px 5px 12px;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    padding: 10px;
     color: aliceblue;
     background-color: #1b263b;
     font-weight: 600;
+}
+
+#contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contatos p {
+    font-size: 0.75em;
+    margin: 5px 0px;
+}
+
+#contatos img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25.5px;
+    margin-right: 5px;
+}
+
+#localizacao, #instagram, #whatsapp {
+    display: flex;
+    flex-direction: row;
+}
+
+#contatos p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer img {
+    width: 8rem;
 }
 
 /* Responsividade */
