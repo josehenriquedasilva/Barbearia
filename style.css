@@ -150,6 +150,9 @@ header p {
     transition: transform .3s;
     border-radius: 12px 0px 0px 12px;
     background-color: #f0ebd8;
+
+    font-family: "Merriweather", serif;
+    font-size: 0.98em;
 }
 
 #menu2.abrir {
@@ -374,4 +377,11 @@ footer img {
     #menu2 {
         display: block;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        background-position: center;
+    }
+    
 }
