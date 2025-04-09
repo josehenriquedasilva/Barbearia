@@ -133,13 +133,18 @@ header p {
 
 #menu1 ul {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
 }
 
 #menu1 a  {
     text-decoration: none;
     color: aliceblue;
+    padding: 8px;
+}
+
+#menu1 a:hover {
+    background-color: #1b263b;
+    border-radius: 12px;
+    transition-duration: 0.3s;
 }
 
 #menu2 {
@@ -399,6 +404,23 @@ footer img {
 @media screen and (min-width: 1024px) {
     header {
         background-position: center;
+    }
+
+    body {
+        background-color: #2b3d5e;
+    }
+
+    #info {
+        border-radius: 10px;
+        margin: 50px 0;
+    }
+
+    #barbeiros, #servicos {
+        margin: 0px 100px;
+    }
+
+    #servicos {
+        margin-bottom: 20px;
     }
     
 }
