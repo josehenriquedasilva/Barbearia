@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: #ece2bd;
+    background-color: #adb5bd;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ header p {
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    background-color: #1b263b;
+    background-color: #343a40;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -106,7 +106,9 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to top, rgba(52, 58, 64, 0.123), rgba(52, 58, 64, 1)); /* Cinza Escuro */
+
+
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -149,7 +151,7 @@ header p {
     transform: translateX(100%);
     transition: transform .3s;
     border-radius: 12px 0px 0px 12px;
-    background-color: #f0ebd8;
+    background-color: #adb5bd;
 
     font-family: "Merriweather", serif;
     font-size: 0.98em;
@@ -169,7 +171,7 @@ header p {
 
 #menu2 a {
     text-decoration: none;
-    color: #1b263b;
+    color: #343a40;
     font-weight: bolder;
 }
 
@@ -216,12 +218,14 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ece2bd;
+    background-color: #adb5bd;
     max-width: 1024px;
 }
 
-#info h2, #info h3 {
+#info h2{
     font-size: 1.5em;
+    font-family: "Lobster", sans-serif;
+    font-size: 1.8em;
     text-align: center;
     color: #1b263b;
     margin: 15px 0px;
@@ -232,11 +236,6 @@ nav ul {
 #sobre {
     padding: 10px;
     text-align: justify;
-}
-
-#sobre h2 {
-    font-family: "Lobster", sans-serif;
-    font-size: 1.8em;
 }
 
 #sobre p {
@@ -255,9 +254,9 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f0ebd8;
-    padding: 10px;
-    height: 30vh;
+    flex-wrap: wrap;
+    background-color: #f8f9fa;
+    min-height: 30vh;
     margin-bottom: 50px;
     border-radius: 15px;
 }
@@ -270,12 +269,16 @@ nav ul {
 #barbeiro1, #barbeiro2 {
     text-align: center;
     font-weight: 600;
-    margin-top: 30px;
+    margin: 10px;
+}
+
+#barbeiro1 p, #barbeiro2 p {
+    margin-bottom: 10px;
 }
 
 #barbeiros button {
-    padding: 5px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 8px;
     border: none;
     font-weight: 600;
     background-color: #1b263b;
@@ -285,7 +288,7 @@ nav ul {
 #barbeiros button:hover {
     color: #1b263b;
     background-color: aliceblue;
-    transition-duration: .4s;
+    transition-duration: .3s;
 }
 
 /*Serviços*/
@@ -294,14 +297,18 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f0ebd8;
+    flex-wrap: wrap;
+    background-color: #f8f9fa;
     padding: 10px;
-    height: 30vh;
+    min-height: 30vh;
+    margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 #servico1, #servico2 {
     text-align: center;
     font-weight: 600;
+    margin: 15px;
 }
 
 #servicos img {
@@ -311,9 +318,8 @@ nav ul {
 /* Rodapé */
 
 footer {
-    display: flex;
+    width: 100%;
     background-color: #1b263b;
-    margin-top: 20px;
 }
 
 #rodape {
@@ -365,6 +371,13 @@ footer img {
 
 /* Responsividade */
 
+@media screen and (max-width: 300px) {
+    #rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 530px) {
     #abrir {
         display: block;
@@ -376,6 +389,10 @@ footer img {
 
     #menu2 {
         display: block;
+    }
+
+    header {
+        background-position: center;
     }
 }
 
