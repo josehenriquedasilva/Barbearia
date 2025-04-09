@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 main {
